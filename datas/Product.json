@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Smartphone XYZ",
+    "price": "12999",
+    "Description": "6.5-inch HD display, 64GB storage, dual camera",
+    "ratings": "4.3",
+    "images": [
+      {"image": "https://example.com/images/xyz_front.jpg"},
+      {"image": "https://example.com/images/xyz_back.jpg"}
+    ],
+    "category": "Mobiles",
+    "Stocks": "57",
+    "Reviews": "26",
+    "CreatedAt": "2024-05-14T14:30:00.000Z"
+  },
+  {
+    "name": "Laptop ABC",
+    "price": "46999",
+    "Description": "15.6-inch, i5 11th Gen, 8GB RAM, 512GB SSD",
+    "ratings": "4.5",
+    "images": [
+      {"image": "https://example.com/images/abc_main.jpg"}
+    ],
+    "category": "Laptops",
+    "Stocks": "14",
+    "Reviews": "12",
+    "CreatedAt": "2024-03-21T10:20:00.000Z"
+  },
+  {
+    "name": "Bluetooth Speaker Mini",
+    "price": "1299",
+    "Description": "Portable speaker, 10 hours battery, waterproof",
+    "ratings": "4.2",
+    "images": [
+      {"image": "https://example.com/images/speaker_mini_blue.jpg"},
+      {"image": "https://example.com/images/speaker_mini_black.jpg"}
+    ],
+    "category": "Audio",
+    "Stocks": "89",
+    "Reviews": "98",
+    "CreatedAt": "2023-12-05T17:00:00.000Z"
+  },
+  {
+    "name": "Fitness Band Pro",
+    "price": "2299",
+    "Description": "Heart rate, SpO2, sleep monitor, 1.1-inch AMOLED display",
+    "ratings": "4.1",
+    "images": [
+      {"image": "https://example.com/images/fitness_band_black.jpg"},
+      {"image": "https://example.com/images/fitness_band_red.jpg"}
+    ],
+    "category": "Wearables",
+    "Stocks": "76",
+    "Reviews": "34",
+    "CreatedAt": "2024-04-12T08:45:00.000Z"
+  },
+  {
+    "name": "Wireless Mouse",
+    "price": "699",
+    "Description": "2.4 GHz wireless, USB nano receiver, 1600 DPI",
+    "ratings": "4.0",
+    "images": [
+      {"image": "https://example.com/images/mouse_black.jpg"}
+    ],
+    "category": "Accessories",
+    "Stocks": "120",
+    "Reviews": "44",
+    "CreatedAt": "2023-10-25T13:15:00.000Z"
+  },
+  {
+    "name": "LED Monitor 24 inch",
+    "price": "8499",
+    "Description": "Full HD, 60Hz, HDMI/VGA, slim bezel",
+    "ratings": "4.4",
+    "images": [
+      {"image": "https://example.com/images/monitor_24_front.jpg"},
+      {"image": "https://example.com/images/monitor_24_side.jpg"}
+    ],
+    "category": "Monitors",
+    "Stocks": "35",
+    "Reviews": "10",
+    "CreatedAt": "2024-01-18T11:00:00.000Z"
+  },
+  {
+    "name": "Gaming Keyboard K500",
+    "price": "2499",
+    "Description": "RGB backlight, mechanical keys, anti-ghosting",
+    "ratings": "4.6",
+    "images": [
+      {"image": "https://example.com/images/kb_k500.jpg"}
+    ],
+    "category": "Accessories",
+    "Stocks": "62",
+    "Reviews": "27",
+    "CreatedAt": "2024-02-28T09:25:00.000Z"
+  }
+]
