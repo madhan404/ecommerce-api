@@ -1,0 +1,137 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gemini API Test</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f4f4f9;
+        }
+        #output-container {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #output {
+            white-space: pre-wrap; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Response from your API:</h1>
+<input type="text" id = 'inp'>
+<button id = 'btnn'>submit</button>
+<p id ='qnnn'> ur question is : <h1>inpTxt</h1>  </p>
+    <div id="output-container">
+        <p id="output">Loading from server...</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" > </script>
+    <script>
+
+        const inp = document.getElementById('inp');
+        const btn = document.getElementById('btnn');
+        const qnP = document.getElementById('qnnn');
+        const output = document.getElementById('output');
+        btn.addEventListener('click', function(){
+            
+            console.log('clike');
+            const inpTxt = inp.value.trim();
+            if(!inpTxt){
+                alert('edhachu inp la kudung bhaii...')
+            }
+            qnP.textContent  = inpTxt;
+
+            axios.post('http://localhost:2000/rte/getOP', {data : inpTxt},{
+                headers : {
+                    'Content-type': "application/json"
+                }
+            } )
+            .then(opRes =>{
+                output.textContent = opRes.data.parseAlone;
+
+            })
+
+        } )
+
+    </script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gemini API Test</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f4f4f9;
+    }
+    #output-container {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    #output {
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Response from your API:</h1>
+  <input type="text" id="inp" placeholder="Type your question here">
+  <button id="btnn">Submit</button>
+
+  <p>ur question is: <span id="qnnn"></span></p>
+
+  <div id="output-container">
+    <p id="output">Waiting for input...</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const inp = document.getElementById('inp');
+    const btn = document.getElementById('btnn');
+    const qnP = document.getElementById('qnnn');
+    const output = document.getElementById('output');
+
+    btn.addEventListener('click', function () {
+      const inpTxt = inp.value.trim();
+
+      if (!inpTxt) {
+        alert('edhachu inp la kudung bhaii...');
+        return;
+      }
+
+      qnP.textContent = inpTxt;
+      output.textContent = 'Loading from server...';
+
+      axios.post('http://localhost:2000/rte/getOP', { data: inpTxt }, {
+        headers: {
+          'Content-Type': "application/json"
+        }
+      })
+      .then(opRes => {
+        output.textContent = opRes.data.parseAlone || 'No response from Gemini';
+      })
+      .catch(err => {
+        console.error(err);
+        output.textContent = 'Server error. Check console.';
+      });
+    });
+  </script>
+
+</body>
+</html>
